@@ -23,13 +23,11 @@ const INITIAL_NODES = [
       x: 200,
       y: 200
     },
-    textContent: 'Ruan Lindo',
-    data: {},
+   data: {}
   },
 ] satisfies Node[]
 
 function App() {
-
   const [ edges, setEdges, onEdgesChange ] = useEdgesState([])
   const [ nodes, setNodes, onNodesChange ] = useNodesState(INITIAL_NODES)
 
@@ -55,7 +53,6 @@ function App() {
 
   return (
     <div className='w-screen h-screen'>
-      {/* Botao para exportar os dados dos nodes e edges para o console em formato JSON */}
       <button onClick={() => console.log(JSON.stringify({ nodes, edges }, null, 2))}>Exportar</button>
 
       <ReactFlow
